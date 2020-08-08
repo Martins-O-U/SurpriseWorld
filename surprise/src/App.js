@@ -1,11 +1,11 @@
 import React from 'react';
-import Home from './home';
+import Home from './Component/home';
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 // import HomeImg from "./images/homeImage.jpg"
 import HomeImg from "./images/new.jpg"
-import Success from './success';
-import Failed from './Failed';
+import Success from './Component/success';
+import Failed from './Component/Failed';
 
 function App() {
   return (

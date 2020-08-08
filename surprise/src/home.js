@@ -19,17 +19,15 @@ function Home(props) {
 
     const submitInput = (event) => {
         if (message.name.toLowerCase() === "chidinma") {
-            console.log(message.name.toLowerCase())
             props.history.push("/success")
         } else {
-            console.log(message.name.toLowerCase())
             props.history.push("/failed")
         }
         event.preventDefault()
     }
     return (
         <StyledDiv>
-            <div className="welcome">
+            <div className="welcome animate__animated animate__fadeIn">
                 <p><span>Welcome</span> to the home of surprises!</p>
                 <p>To experience today's surprise, please enter your first name below</p>
                 <form onSubmit={submitInput}>
@@ -48,6 +46,10 @@ const StyledDiv = styled.div`
     font-size: 20px;
     font-weight: 800px;
 
+    .animate__animated.animate__fadeIn {
+        --animate-duration: 3s;
+      }
+
     @media only screen and (max-width: 500px){
     .welcome{
         margin-left: 30%;
@@ -55,7 +57,7 @@ const StyledDiv = styled.div`
 
         p{
             padding-right: 2px;
-            
+
             span{
                 font-size: 30px;
                 font-weight: 100px;

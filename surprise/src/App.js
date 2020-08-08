@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from './home';
+import styled from "styled-components";
+// import HomeImg from "./images/homeImage.jpg"
+import HomeImg from "./images/new.jpg"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledDiv>
+      <Home />
+
+    </StyledDiv>
   );
 }
 
 export default App;
+
+const StyledDiv = styled.div`
+background-image: url(${HomeImg});
+height: 100vh;
+
+
+@media only screen and (max-width: 762px){
+  background-image: url(${HomeImg});
+  height: 100vh;
+  margin-top: 0%;
+} 
+
+
+`;

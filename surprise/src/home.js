@@ -15,16 +15,17 @@ function Home(props) {
             ...message,
             [event.target.name]: event.target.value
         })
-        console.log(message)
-
     }
 
     const submitInput = (event) => {
-        event.preventDefault()
-        if (message.name.toLowerCase() === "chidinma" || "chimma" || "chidimma" || "mma") {
-            props.history.push('/success')
+        if (message.name.toLowerCase() === "chidinma") {
+            console.log(message.name.toLowerCase())
+            props.history.push("/success")
+        } else {
+            console.log(message.name.toLowerCase())
+            props.history.push("/failed")
         }
-        props.history.push('/failed')
+        event.preventDefault()
     }
     return (
         <StyledDiv>
@@ -47,13 +48,18 @@ const StyledDiv = styled.div`
     font-size: 20px;
     font-weight: 800px;
 
+    @media only screen and (max-width: 500px){
     .welcome{
         margin-left: 30%;
         padding-top: 35%;
 
-        span{
-            font-size: 30px;
-            font-weight: 100px;
+        p{
+            padding-right: 2px;
+            
+            span{
+                font-size: 30px;
+                font-weight: 100px;
+            }
         }
 
         form {
@@ -71,6 +77,7 @@ const StyledDiv = styled.div`
                 width: 80px;
             }
         }
+    }
     }
 
 `;

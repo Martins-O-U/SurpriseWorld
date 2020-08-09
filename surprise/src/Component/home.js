@@ -77,6 +77,8 @@ const StyledDiv = styled.div`
                 border-radius: 10px;
                 padding: 2px 5px;
                 width: 80px;
+                background: #FAEBD7;
+                border: 1.2px solid #FF7F50;
             }
         }
     }
